@@ -1,12 +1,14 @@
 class Todos extends React.Component{
-    constructor(props){
+    constructor(props ){
     super(props)
     this.state ={
     inputTodo:"",
     todos:[]
     }
+
     }
-    rendre (){
+    render (){
+
         return(
             <div className="container mt-4">
                 <h1>To-do List</h1>
@@ -19,7 +21,7 @@ class Todos extends React.Component{
                 this.setState({inputTodo: e.target.value})
             }}
             className="form-control"
-            placecholder="Ajoutez une tache"
+            placeholder="Ajoutez une tache"
             />
             <button className="btn btn-primary" onClick={() => {
                 this.setState({todos:[...this.state.todos, this.state.inputTodo]})
